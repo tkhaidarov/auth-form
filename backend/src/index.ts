@@ -10,7 +10,7 @@ const app: Application = express();
 app.use(cors());
 app.use(express.json());
 app.use('/api/auth', authRoutes);
-app.use('/api/users', authenticate, userRoutes);
+app.use('/api/users', userRoutes);
 
 const startServer = async () => {
   try {
