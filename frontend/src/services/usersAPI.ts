@@ -4,7 +4,7 @@ import { IUserProfile } from '../types/types';
 export const usersAPI = createApi({
   reducerPath: 'usersApi',
   baseQuery: fetchBaseQuery({
-    baseUrl: 'http://localhost:5000/api/users',
+    baseUrl: `${import.meta.env.VITE_API_URL}/api/users`,
     prepareHeaders: headers => {
       const token = localStorage.getItem('token');
       if (token) {

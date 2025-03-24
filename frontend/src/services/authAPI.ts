@@ -3,7 +3,7 @@ import { IAuthResponse, ILoginRequest, IRegisterRequest, IUserProfile } from '..
 export const authAPI = createApi({
   reducerPath: 'authApi',
   baseQuery: fetchBaseQuery({
-    baseUrl: 'http://localhost:5000/api/auth',
+    baseUrl: import.meta.env.VITE_BASE_URL,
     prepareHeaders: headers => {
       const token = localStorage.getItem('token');
       if (token) {
