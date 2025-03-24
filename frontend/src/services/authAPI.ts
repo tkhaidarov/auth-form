@@ -6,6 +6,7 @@ export const authAPI = createApi({
     baseUrl: import.meta.env.VITE_BASE_URL,
     prepareHeaders: headers => {
       const token = localStorage.getItem('token') || '';
+      console.log("Текущий токен:", token);
       if (token) {
         headers.set('Authorization', `Bearer ${token}`);
       }
@@ -32,6 +33,7 @@ export const authAPI = createApi({
         body: data,
       }),
       transformResponse: (response: IAuthResponse) => {
+        console.log("Полученный токен:", response.token);
         localStorage.setItem('token', response.token);
         return response;
       },
