@@ -1,0 +1,29 @@
+.container {
+  height: 100vh;
+}
+
+.card {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+.form-floating > input {
+  padding-right: 40px; /* Отступ справа для иконки */
+}
+
+.icon, .toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: gray;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+}
+
+.toggle-password:focus {
+  outline: none;
+}

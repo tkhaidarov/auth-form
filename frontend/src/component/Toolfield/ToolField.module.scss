@@ -1,0 +1,13 @@
+.toolbar{
+  display: flex;
+  flex-direction: row;
+  column-gap: 2rem;
+
+}
+.searchContainer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 60%;
+}
