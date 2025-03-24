@@ -6,7 +6,6 @@ export const authAPI = createApi({
     baseUrl: `${import.meta.env.VITE_API_URL}/api/auth`,
     prepareHeaders: headers => {
       const token = localStorage.getItem('token') || '';
-      console.log("Текущий токен:", token);
       if (token) {
         headers.set('Authorization', `Bearer ${token}`);
       }
